@@ -1,7 +1,7 @@
 # Sun.get
 
 Sun.get – A weather app for coders..
-[![Build Status]()
+[![Build Status](https://travis-ci.org/HosseinYousefi/sun.get.svg?branch=master)](https://travis-ci.org/HosseinYousefi/sun.get)
 
 # Exec Summary
 
