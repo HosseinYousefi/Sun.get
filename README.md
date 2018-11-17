@@ -1,7 +1,7 @@
 # Sun.get
 
 Sun.get – A weather app for coders..
-
+[![Build Status]()
 
 # Exec Summary
 
@@ -42,3 +42,7 @@ Besides the general features, Sun.get provides:
  > e.g. if it is rainy: why don’t you stay home and accept a new code challenge?
 
 - City overview in case you consider yourself a frequent traveler or generally an interested weather guru.
+
+## Team Members
+Hossein Yousefi - 10+ years experience in programming with an international background. Born in Iran having studied in Italy and Spain and successfully participating in multiple programming challenges, he is a future star at his rising.
+Marius Klages - 5+ years of work experience in middle and senior management positions in two different countries, Marius is able to provide the support from a general usability perspective.
