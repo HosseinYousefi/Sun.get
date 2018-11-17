@@ -1,6 +1,11 @@
+![
+](https://raw.githubusercontent.com/HosseinYousefi/sun.get/master/Logo%20github.png)
+
 # Sun.get
 
-Sun.get – A weather app for coders..
+Sun.get – A weather app for coders...  
+
+
 [![Build Status](https://travis-ci.org/HosseinYousefi/sun.get.svg?branch=master)](https://travis-ci.org/HosseinYousefi/sun.get)
 
 # Exec Summary
