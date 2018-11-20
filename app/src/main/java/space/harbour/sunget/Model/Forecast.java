@@ -1,4 +1,4 @@
-package harbour.space.sunget;
+package space.harbour.sunget.Model;
 
 import java.time.DayOfWeek;
 import java.util.Date;

@@ -1,9 +1,9 @@
-package harbour.space.sunget;
+package space.harbour.sunget.Model;
 
-public class Speed implements Measurement {
+public class Pressure implements Measurement {
     double value;
 
-    public Speed(double value) {
+    public Pressure(double value) {
         this.value = value;
     }
 

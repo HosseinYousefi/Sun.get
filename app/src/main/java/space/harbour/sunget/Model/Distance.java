@@ -1,4 +1,4 @@
-package harbour.space.sunget;
+package space.harbour.sunget.Model;
 
 public class Distance implements Measurement {
     int value;

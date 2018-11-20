@@ -1,4 +1,4 @@
-package harbour.space.sunget;
+package space.harbour.sunget.Model;
 
 public interface Measurement<T> {
     T getMetric();
