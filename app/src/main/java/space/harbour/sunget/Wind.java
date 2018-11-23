@@ -2,6 +2,12 @@ package space.harbour.sunget;
 
 import io.realm.RealmObject;
 
+/**
+ * Public class to set and get
+ * the detailed wind information
+ * including speed, direction,
+ * and chill (cooling effect)
+ */
 public class Wind extends RealmObject {
     String chill;
     String direction;

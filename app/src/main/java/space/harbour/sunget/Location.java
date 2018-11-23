@@ -3,11 +3,9 @@ package space.harbour.sunget;
 import io.realm.RealmObject;
 
 /**
- * Public class specifying the location
- * attributes down to city level
- * city (String)
- * country (String)
- * region (String)
+ * Public class to set and get
+ * the location attributes down
+ * to city level
  */
 public class Location extends RealmObject {
     String city;

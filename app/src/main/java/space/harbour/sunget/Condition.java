@@ -4,14 +4,9 @@ import io.realm.RealmObject;
 
 /**
  * Public class to get and set the
- * parameter code, date, temperature and status
- * code is an Integer defining the specific weather condition
- * date is an Object ZonedDateTime indicating
- * the exact time of the location
- * temp is an Object Temperature indicating
- * the number value of the temperature
- * text is a String describing the code
- * in generally understandably words
+ * date, temperature and text of
+ * the weather conditions of a
+ * specific location
  */
 
 public class Condition extends RealmObject {
