@@ -8,7 +8,6 @@ import io.realm.RealmObject;
  * Pressure is defined as an Object of Pressure
  * Visibility is defined as a Double
  */
-public class Atmosphere {
 public class Atmosphere extends RealmObject {
     int humidity;
     Pressure pressure;
