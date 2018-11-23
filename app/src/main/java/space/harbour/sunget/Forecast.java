@@ -5,6 +5,15 @@ import java.util.Date;
 
 import io.realm.RealmObject;
 
+/**
+ * Public class specifying the weather conditions
+ * of a forecast value
+ * code (Integer) defines the conditions
+ * date (Object Date) defines the date of the forecast
+ * day (Object DayOfWeek) defines a weekday
+ * high (Object Temperature) is maximum of temperature that day
+ * low (Object Temperature) is minimum of temperature that day
+ */
 public class Forecast extends RealmObject {
     int code;
     Date date;

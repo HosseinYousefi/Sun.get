@@ -2,6 +2,11 @@ package space.harbour.sunget;
 
 import io.realm.RealmObject;
 
+/**
+ * Public class specifying the wind
+ * speed in either km/h or miles/h
+ * value (Double)
+ */
 public class Speed extends RealmObject implements Measurement {
     double value;
 

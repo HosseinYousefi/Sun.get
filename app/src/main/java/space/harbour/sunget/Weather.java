@@ -2,6 +2,15 @@ package space.harbour.sunget;
 
 import io.realm.RealmObject;
 
+/**
+ * Public class weather providing the climate
+ * information for one location for one specific
+ * day defined in the item
+ * location (Location)
+ * wind (Wind)
+ * atmosphere (Atmosphere)
+ * astronomy (Astronomy)
+ */
 public class Weather extends RealmObject {
     Location location;
     Wind wind;
