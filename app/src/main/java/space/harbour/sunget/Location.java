@@ -7,12 +7,6 @@ public class Location extends RealmObject {
     String country;
     String region;
 
-    public Location(String city, String country, String region) {
-        this.city = city;
-        this.country = country;
-        this.region = region;
-    }
-
     public String getCity() {
         return city;
     }

@@ -7,11 +7,6 @@ public class Item extends RealmObject {
     Condition condition;
     RealmList<Forecast> forecast;
 
-    public Item(Condition condition, RealmList<Forecast> forecast) {
-        this.condition = condition;
-        this.forecast = forecast;
-    }
-
     public Condition getCondition() {
         return condition;
     }

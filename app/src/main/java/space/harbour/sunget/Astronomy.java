@@ -7,31 +7,26 @@ import io.realm.RealmObject;
 /**
  * Public class to set and get the time
  * of the sunrise and sunset introducing
- * two parameters of an Object LocalTime
+ * two parameters of an Object String
  */
 
 public class Astronomy extends RealmObject {
-    LocalTime sunrise;
-    LocalTime sunset;
+    String sunrise;
+    String sunset;
 
-    public Astronomy(LocalTime sunrise, LocalTime sunset) {
-        this.sunrise = sunrise;
-        this.sunset = sunset;
-    }
-
-    public LocalTime getSunrise() {
+    public String getSunrise() {
         return sunrise;
     }
 
-    public void setSunrise(LocalTime sunrise) {
+    public void setSunrise(String sunrise) {
         this.sunrise = sunrise;
     }
 
-    public LocalTime getSunset() {
+    public String getSunset() {
         return sunset;
     }
 
-    public void setSunset(LocalTime sunset) {
+    public void setSunset(String sunset) {
         this.sunset = sunset;
     }
 }

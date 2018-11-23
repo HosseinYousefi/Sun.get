@@ -9,14 +9,6 @@ public class Weather extends RealmObject {
     Astronomy astronomy;
     Item item;
 
-    public Weather(Location location, Wind wind, Atmosphere atmosphere, Astronomy astronomy, Item item) {
-        this.location = location;
-        this.wind = wind;
-        this.atmosphere = atmosphere;
-        this.astronomy = astronomy;
-        this.item = item;
-    }
-
     public Location getLocation() {
         return location;
     }
