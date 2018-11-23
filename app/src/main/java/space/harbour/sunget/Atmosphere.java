@@ -1,6 +1,7 @@
 package space.harbour.sunget;
 
 import io.realm.RealmObject;
+
 /**
  * Public class to set and get
  * key values of the atmospheric conditions
@@ -8,6 +9,7 @@ import io.realm.RealmObject;
  * Pressure is defined as an Object of Pressure
  * Visibility is defined as a Double
  */
+
 public class Atmosphere extends RealmObject {
     int humidity;
     Pressure pressure;

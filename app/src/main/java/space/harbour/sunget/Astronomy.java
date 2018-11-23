@@ -3,6 +3,7 @@ package space.harbour.sunget;
 import java.time.LocalTime;
 
 import io.realm.RealmObject;
+
 /**
  * Public class to set and get the time
  * of the sunrise and sunset introducing

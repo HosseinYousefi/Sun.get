@@ -9,6 +9,7 @@ import io.realm.RealmObject;
  * parameter code, date, temperature and status
  * Code is an Integer 
  */
+
 public class Condition extends RealmObject {
     int code;
     ZonedDateTime date;
