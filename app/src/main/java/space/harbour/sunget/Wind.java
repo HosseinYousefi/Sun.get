@@ -3,37 +3,31 @@ package space.harbour.sunget;
 import io.realm.RealmObject;
 
 public class Wind extends RealmObject {
-    int chill;
-    int direction;
-    Speed speed;
+    String chill;
+    String direction;
+    String speed;
 
-    public Wind(int chill, int direction, Speed speed) {
-        this.chill = chill;
-        this.direction = direction;
-        this.speed = speed;
-    }
-
-    public int getChill() {
+    public String getChill() {
         return chill;
     }
 
-    public void setChill(int chill) {
+    public void setChill(String chill) {
         this.chill = chill;
     }
 
-    public int getDirection() {
+    public String getDirection() {
         return direction;
     }
 
-    public void setDirection(int direction) {
+    public void setDirection(String direction) {
         this.direction = direction;
     }
 
-    public Speed getSpeed() {
+    public String getSpeed() {
         return speed;
     }
 
-    public void setSpeed(Speed speed) {
+    public void setSpeed(String speed) {
         this.speed = speed;
     }
 }

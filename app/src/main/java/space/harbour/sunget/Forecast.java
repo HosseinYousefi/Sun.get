@@ -15,59 +15,41 @@ import io.realm.RealmObject;
  * low (Object Temperature) is minimum of temperature that day
  */
 public class Forecast extends RealmObject {
-    int code;
-    Date date;
-    DayOfWeek day;
-    Temperature high;
-    Temperature low;
-    String text; // text in API
+    String date;
+    String day;
+    String high;
+    String low;
+    String text;
 
-    public Forecast(int code, Date date, DayOfWeek day, Temperature high, Temperature low, String status) {
-        this.code = code;
-        this.date = date;
-        this.day = day;
-        this.high = high;
-        this.low = low;
-        this.text = status;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public DayOfWeek getDay() {
+    public String getDay() {
         return day;
     }
 
-    public void setDay(DayOfWeek day) {
+    public void setDay(String day) {
         this.day = day;
     }
 
-    public Temperature getHigh() {
+    public String getHigh() {
         return high;
     }
 
-    public void setHigh(Temperature high) {
+    public void setHigh(String high) {
         this.high = high;
     }
 
-    public Temperature getLow() {
+    public String getLow() {
         return low;
     }
 
-    public void setLow(Temperature low) {
+    public void setLow(String low) {
         this.low = low;
     }
 
@@ -75,7 +57,7 @@ public class Forecast extends RealmObject {
         return text;
     }
 
-    public void setStatus(String status) {
-        this.text = status;
+    public void setText(String text) {
+        this.text = text;
     }
 }

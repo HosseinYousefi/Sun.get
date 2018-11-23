@@ -11,47 +11,40 @@ import io.realm.RealmObject;
  */
 
 public class Atmosphere extends RealmObject {
-    int humidity;
-    Pressure pressure;
-    int rising;
-    double visibility;
+    String humidity;
+    String pressure;
+    String rising;
+    String visibility;
 
-    public Atmosphere(int humidity, Pressure pressure, int rising, double visibility) {
-        this.humidity = humidity;
-        this.pressure = pressure;
-        this.rising = rising;
-        this.visibility = visibility;
-    }
-
-    public int getHumidity() {
+    public String getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(int humidity) {
+    public void setHumidity(String humidity) {
         this.humidity = humidity;
     }
 
-    public Pressure getPressure() {
+    public String getPressure() {
         return pressure;
     }
 
-    public void setPressure(Pressure pressure) {
+    public void setPressure(String pressure) {
         this.pressure = pressure;
     }
 
-    public int getRising() {
+    public String getRising() {
         return rising;
     }
 
-    public void setRising(int rising) {
+    public void setRising(String rising) {
         this.rising = rising;
     }
 
-    public double getVisibility() {
+    public String getVisibility() {
         return visibility;
     }
 
-    public void setVisibility(double visibility) {
+    public void setVisibility(String visibility) {
         this.visibility = visibility;
     }
 }

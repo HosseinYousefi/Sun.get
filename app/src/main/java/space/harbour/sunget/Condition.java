@@ -1,7 +1,5 @@
 package space.harbour.sunget;
 
-import java.time.ZonedDateTime;
-
 import io.realm.RealmObject;
 
 /**
@@ -17,47 +15,31 @@ import io.realm.RealmObject;
  */
 
 public class Condition extends RealmObject {
-    int code;
-    ZonedDateTime date;
-    Temperature temp;
+    String date;
+    String temp;
     String text;
 
-    public Condition(int code, ZonedDateTime date, Temperature temp, String text) {
-        this.code = code;
-        this.date = date;
-        this.temp = temp;
-        this.text = text;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public ZonedDateTime getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(ZonedDateTime date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public Temperature getTemp() {
+    public String getTemp() {
         return temp;
     }
 
-    public void setTemp(Temperature temp) {
-        this.temp= temp;
+    public void setTemp(String temp) {
+        this.temp = temp;
     }
 
     public String getText() {
         return text;
     }
 
-    public void setText(String status) {
+    public void setText(String text) {
         this.text = text;
     }
 }
