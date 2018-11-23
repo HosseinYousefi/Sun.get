@@ -4,9 +4,8 @@ import io.realm.RealmList;
 import io.realm.RealmObject;
 
 /**
- * Public class specifying condition and forecast
- * condition (Object Condition)
- * forecast (RealmList Forecast)
+ * Public class to set and get
+ * condition and forecast
  */
 public class Item extends RealmObject {
     Condition condition;

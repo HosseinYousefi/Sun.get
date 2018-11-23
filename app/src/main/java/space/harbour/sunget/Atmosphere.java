@@ -4,10 +4,8 @@ import io.realm.RealmObject;
 
 /**
  * Public class to set and get
- * key values of the atmospheric conditions
- * Humidity is defined as and Integer
- * Pressure is defined as an Object of Pressure
- * Visibility is defined as a Double
+ * key values of the atmospheric
+ * conditions of a specific location
  */
 
 public class Atmosphere extends RealmObject {
