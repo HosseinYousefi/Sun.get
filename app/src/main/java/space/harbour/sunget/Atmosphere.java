@@ -1,4 +1,4 @@
-package space.harbour.sunget.Model;
+package space.harbour.sunget;
 
 public class Atmosphere {
     int humidity;

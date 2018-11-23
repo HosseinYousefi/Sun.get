@@ -1,4 +1,4 @@
-package space.harbour.sunget.Model;
+package space.harbour.sunget;
 
 import java.time.LocalTime;
 
