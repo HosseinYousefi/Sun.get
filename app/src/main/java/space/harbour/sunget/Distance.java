@@ -1,9 +1,9 @@
-package space.harbour.sunget.Model;
+package space.harbour.sunget;
 
-public class Temprature implements Measurement {
+public class Distance implements Measurement {
     int value;
 
-    public Temprature(int value) {
+    public Distance(int value) {
         this.value = value;
     }
 

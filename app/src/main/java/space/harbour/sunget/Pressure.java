@@ -1,4 +1,4 @@
-package space.harbour.sunget.Model;
+package space.harbour.sunget;
 
 public class Pressure implements Measurement {
     double value;
