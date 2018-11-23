@@ -2,6 +2,11 @@ package space.harbour.sunget;
 
 import java.time.ZonedDateTime;
 
+/**
+ * Public class to get and set the
+ * parameter code, date, temperature and status
+ * Code is an Integer 
+ */
 public class Condition {
     int code;
     ZonedDateTime date;

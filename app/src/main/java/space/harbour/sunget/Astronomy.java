@@ -2,6 +2,11 @@ package space.harbour.sunget;
 
 import java.time.LocalTime;
 
+/**
+ * Public class to set and get the time
+ * of the sunrise and sunset introducing
+ * two parameters of an Object LocalTime
+ */
 public class Astronomy {
     LocalTime sunrise;
     LocalTime sunset;
