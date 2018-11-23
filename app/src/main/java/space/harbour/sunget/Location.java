@@ -1,6 +1,8 @@
 package space.harbour.sunget;
 
-public class Location {
+import io.realm.RealmObject;
+
+public class Location extends RealmObject {
     String city;
     String country;
     String region;

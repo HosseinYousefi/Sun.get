@@ -1,6 +1,8 @@
 package space.harbour.sunget;
 
-public class Pressure implements Measurement {
+import io.realm.RealmObject;
+
+public class Pressure extends RealmObject implements Measurement {
     double value;
 
     public Pressure(double value) {

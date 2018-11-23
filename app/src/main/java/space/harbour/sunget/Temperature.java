@@ -2,10 +2,10 @@ package space.harbour.sunget;
 
 import io.realm.RealmObject;
 
-public class Distance extends RealmObject implements Measurement {
+public class Temperature extends RealmObject implements Measurement {
     int value;
 
-    public Distance(int value) {
+    public Temperature(int value) {
         this.value = value;
     }
 
