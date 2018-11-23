@@ -3,21 +3,23 @@ package space.harbour.sunget;
 import java.time.DayOfWeek;
 import java.util.Date;
 
-public class Forecast {
+import io.realm.RealmObject;
+
+public class Forecast extends RealmObject {
     int code;
     Date date;
     DayOfWeek day;
-    Temprature high;
-    Temprature low;
-    String status; // text in API
+    Temperature high;
+    Temperature low;
+    String text; // text in API
 
-    public Forecast(int code, Date date, DayOfWeek day, Temprature high, Temprature low, String status) {
+    public Forecast(int code, Date date, DayOfWeek day, Temperature high, Temperature low, String status) {
         this.code = code;
         this.date = date;
         this.day = day;
         this.high = high;
         this.low = low;
-        this.status = status;
+        this.text = status;
     }
 
     public int getCode() {
@@ -44,27 +46,27 @@ public class Forecast {
         this.day = day;
     }
 
-    public Temprature getHigh() {
+    public Temperature getHigh() {
         return high;
     }
 
-    public void setHigh(Temprature high) {
+    public void setHigh(Temperature high) {
         this.high = high;
     }
 
-    public Temprature getLow() {
+    public Temperature getLow() {
         return low;
     }
 
-    public void setLow(Temprature low) {
+    public void setLow(Temperature low) {
         this.low = low;
     }
 
-    public String getStatus() {
-        return status;
+    public String getText() {
+        return text;
     }
 
     public void setStatus(String status) {
-        this.status = status;
+        this.text = status;
     }
 }

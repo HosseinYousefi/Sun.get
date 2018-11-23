@@ -2,17 +2,19 @@ package space.harbour.sunget;
 
 import java.time.ZonedDateTime;
 
-public class Condition {
+import io.realm.RealmObject;
+
+public class Condition extends RealmObject {
     int code;
     ZonedDateTime date;
-    Temprature temprature; // temp in API
-    String status; // text in API
+    Temperature temp;
+    String text;
 
-    public Condition(int code, ZonedDateTime date, Temprature temprature, String status) {
+    public Condition(int code, ZonedDateTime date, Temperature temp, String text) {
         this.code = code;
         this.date = date;
-        this.temprature = temprature;
-        this.status = status;
+        this.temp = temp;
+        this.text = text;
     }
 
     public int getCode() {
@@ -31,19 +33,19 @@ public class Condition {
         this.date = date;
     }
 
-    public Temprature getTemprature() {
-        return temprature;
+    public Temperature getTemp() {
+        return temp;
     }
 
-    public void setTemprature(Temprature temprature) {
-        this.temprature = temprature;
+    public void setTemp(Temperature temp) {
+        this.temp= temp;
     }
 
-    public String getStatus() {
-        return status;
+    public String getText() {
+        return text;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setText(String status) {
+        this.text = text;
     }
 }

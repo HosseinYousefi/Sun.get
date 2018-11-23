@@ -1,6 +1,8 @@
 package space.harbour.sunget;
 
-public class Distance implements Measurement {
+import io.realm.RealmObject;
+
+public class Distance extends RealmObject implements Measurement {
     int value;
 
     public Distance(int value) {

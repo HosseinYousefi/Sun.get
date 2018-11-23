@@ -2,7 +2,9 @@ package space.harbour.sunget;
 
 import java.time.LocalTime;
 
-public class Astronomy {
+import io.realm.RealmObject;
+
+public class Astronomy extends RealmObject {
     LocalTime sunrise;
     LocalTime sunset;
 

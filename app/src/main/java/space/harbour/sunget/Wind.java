@@ -1,6 +1,8 @@
 package space.harbour.sunget;
 
-public class Wind {
+import io.realm.RealmObject;
+
+public class Wind extends RealmObject {
     int chill;
     int direction;
     Speed speed;

@@ -1,6 +1,8 @@
 package space.harbour.sunget;
 
-public class Atmosphere {
+import io.realm.RealmObject;
+
+public class Atmosphere extends RealmObject {
     int humidity;
     Pressure pressure;
     int rising;

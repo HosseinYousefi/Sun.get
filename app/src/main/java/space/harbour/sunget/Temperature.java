@@ -1,9 +1,11 @@
 package space.harbour.sunget;
 
-public class Temprature implements Measurement {
+import io.realm.RealmObject;
+
+public class Temperature extends RealmObject implements Measurement {
     int value;
 
-    public Temprature(int value) {
+    public Temperature(int value) {
         this.value = value;
     }
 

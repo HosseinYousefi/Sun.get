@@ -1,22 +1,20 @@
 package space.harbour.sunget;
 
-import java.util.List;
+import io.realm.RealmObject;
 
-public class Weather {
+public class Weather extends RealmObject {
     Location location;
     Wind wind;
     Atmosphere atmosphere;
     Astronomy astronomy;
-    Condition condition;
-    List<Forecast> forecast;
+    Item item;
 
-    public Weather(Location location, Wind wind, Atmosphere atmosphere, Astronomy astronomy, Condition condition, List<Forecast> forecast) {
+    public Weather(Location location, Wind wind, Atmosphere atmosphere, Astronomy astronomy, Item item) {
         this.location = location;
         this.wind = wind;
         this.atmosphere = atmosphere;
         this.astronomy = astronomy;
-        this.condition = condition;
-        this.forecast = forecast;
+        this.item = item;
     }
 
     public Location getLocation() {
@@ -51,19 +49,11 @@ public class Weather {
         this.astronomy = astronomy;
     }
 
-    public Condition getCondition() {
-        return condition;
+    public Item getItem() {
+        return item;
     }
 
-    public void setCondition(Condition condition) {
-        this.condition = condition;
-    }
-
-    public List<Forecast> getForecast() {
-        return forecast;
-    }
-
-    public void setForecast(List<Forecast> forecast) {
-        this.forecast = forecast;
+    public void setItem(Item item) {
+        this.item = item;
     }
 }

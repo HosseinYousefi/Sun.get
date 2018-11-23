@@ -1,6 +1,8 @@
 package space.harbour.sunget;
 
-public class Speed implements Measurement {
+import io.realm.RealmObject;
+
+public class Speed extends RealmObject implements Measurement {
     double value;
 
     public Speed(double value) {
