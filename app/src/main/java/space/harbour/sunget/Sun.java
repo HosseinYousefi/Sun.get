@@ -1,7 +1,9 @@
 package space.harbour.sunget;
 
 public class Sun {
-//    static public Weather get(String cityName) {
-
-//    }
+    public void get(String cityName, WeatherTask.Delegate delegate) {
+        WeatherTask weatherTask = new WeatherTask();
+        weatherTask.delegate = delegate;
+        weatherTask.execute(cityName);
+    }
 }

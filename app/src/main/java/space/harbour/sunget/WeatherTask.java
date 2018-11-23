@@ -5,7 +5,6 @@ import android.os.AsyncTask;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -14,6 +13,17 @@ public class WeatherTask extends AsyncTask<String, Void, String> {
     final static String API_ADDRESS = "https://query.yahooapis.com/v1/public/yql?";
     final static String YQL_QUERY = "q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22$city$%22)";
     final static String CONFIG = "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
+
+    interface Delegate {
+        void taskFinished(String result);
+    }
+
+    Delegate delegate = null;
+
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+    }
 
     @Override
     protected String doInBackground(String... strings) {
@@ -34,5 +44,11 @@ public class WeatherTask extends AsyncTask<String, Void, String> {
             e.printStackTrace();
             return "FAILED";
         }
+    }
+
+    @Override
+    protected void onPostExecute(String s) {
+        super.onPostExecute(s);
+        delegate.taskFinished(s);
     }
 }
