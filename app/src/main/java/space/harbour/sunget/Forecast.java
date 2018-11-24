@@ -1,8 +1,5 @@
 package space.harbour.sunget;
 
-import java.time.DayOfWeek;
-import java.util.Date;
-
 import io.realm.RealmObject;
 
 /**

@@ -1,6 +1,7 @@
 package space.harbour.sunget;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Public class to set and get

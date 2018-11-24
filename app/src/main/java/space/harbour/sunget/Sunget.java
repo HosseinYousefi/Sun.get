@@ -12,6 +12,5 @@ public class Sunget extends Application {
         Realm.init(this);
         RealmConfiguration config = new RealmConfiguration.Builder().name("default.realm").build();
         Realm.setDefaultConfiguration(config);
-        Realm realm = Realm.getDefaultInstance();
     }
 }
