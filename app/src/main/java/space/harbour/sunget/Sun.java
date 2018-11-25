@@ -25,7 +25,8 @@ public class Sun {
                 System.out.println(reader.toString());;
                 Weather weather = realm.createOrUpdateObjectFromJson(Weather.class, reader);
                 System.out.println(weather);
-                delegate.got(weather);
+                if (delegate != null)
+                    delegate.got(weather);
             } catch (JSONException e) {
                 e.printStackTrace();
             }

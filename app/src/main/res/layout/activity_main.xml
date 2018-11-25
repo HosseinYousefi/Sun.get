@@ -6,6 +6,32 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	tools:context=".MainActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<EditText
+			android:id="@+id/cityEditText"
+			android:layout_height="wrap_content"
+			android:layout_gravity="start"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:ems="10"
+			android:inputType="textPersonName"
+			android:hint="@string/city" />
+
+		<Button
+			android:id="@+id/getWeather"
+			android:layout_gravity="end"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:text="@string/get_weather"
+			android:onClick="getWeather"/>
+	</LinearLayout>
+
 	<android.support.v7.widget.RecyclerView
 		android:id="@+id/my_recycler_view"
 		android:scrollbars="vertical"
