@@ -12,11 +12,23 @@ import io.realm.annotations.PrimaryKey;
  * information
  */
 public class Weather extends RealmObject {
+
+    @PrimaryKey
+    String description;
+
     Location location;
     Wind wind;
     Atmosphere atmosphere;
     Astronomy astronomy;
     Item item;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public Location getLocation() {
         return location;

@@ -16,7 +16,6 @@ public class MainActivity extends Activity {
 	private RecyclerView.LayoutManager mLayoutManager;
     private RealmResults<Weather> weathers;
     Realm realm;
-    Sun sun;
 
     // Setting the list when the AsyncQuery is loaded
     private RealmChangeListener<RealmResults<Weather>> realmChangeListener = weathers -> {
@@ -43,10 +42,9 @@ public class MainActivity extends Activity {
 		mRecyclerView.setLayoutManager(mLayoutManager);
 		mAdapter = new WeatherAdapter();
 		mRecyclerView.setAdapter(mAdapter);
-
-        sun = new Sun();
-        sun.get("barcelona", result -> {});
-        sun.get("milano", result -> {});
+        Sun.get("barcelona", result -> {});
+        Sun.get("barcelona", result -> {});
+        Sun.get("milano", result -> {});
 	}
 
     @Override

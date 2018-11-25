@@ -2,8 +2,6 @@ package space.harbour.sunget;
 
 import android.os.AsyncTask;
 
-import org.json.JSONException;
-
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
