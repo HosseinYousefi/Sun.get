@@ -5,6 +5,14 @@ import org.json.JSONObject;
 
 import io.realm.Realm;
 
+/**
+ * Public class Sun getting and executing the
+ * query defined in the public class WeatherTask.
+ *
+ * It reads the JSON Object we receive from the
+ * weather API in order to give us the information
+ * requested from the user in the UI.
+ */
 public class Sun {
 
     interface Delegate {
@@ -29,7 +37,7 @@ public class Sun {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            realm.commitTransaction();;
+            realm.commitTransaction();
             realm.close();
 
         }).execute(cityName);

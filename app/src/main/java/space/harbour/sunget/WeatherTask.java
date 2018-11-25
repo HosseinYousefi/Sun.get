@@ -13,6 +13,21 @@ import java.net.URL;
 import io.realm.Realm;
 
 
+/**
+ * Public class WeatherTask asynchronously performs a task
+ * in the background without the requirement to proactively
+ * manipulate the threads individually
+ * onPreExecute is used to setup the task
+ * doInBackground is a task with computational efforts being
+ * executed immediately after onPreExecute and results will be
+ * published in next step
+ * onPostExecute is invoked as soon as the background computation
+ * finishes and a result should be passed as a parameter
+ *
+ * In general words this class enables us to execute the search
+ * query in the background while the user sees a potential
+ * progress bar in the UI
+ */
 public class WeatherTask extends AsyncTask<String, Void, String> {
     final static String API_ADDRESS = "https://query.yahooapis.com/v1/public/yql?";
     final static String YQL_QUERY = "q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22$city$%22)";
@@ -36,6 +51,16 @@ public class WeatherTask extends AsyncTask<String, Void, String> {
         super.onPreExecute();
     }
 
+
+    /**
+     * The method doInBackground is responsible for the background
+     * computation in order to get the weather API built up
+     *
+     *
+     * @param strings
+     * @return a String with the weather conditions for the requested
+     * city
+     */
     @Override
     protected String doInBackground(String... strings) {
         try {
