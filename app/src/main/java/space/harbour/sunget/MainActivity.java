@@ -92,9 +92,12 @@ public class MainActivity extends Activity {
 
 	}
 
+
     /**
-     *
-     * @param view
+     * This method getWeather calls the official
+     * get method form the sun class to receive
+     * the weather information
+     * @param view of the class View
      */
     public void getWeather(View view) {
         String city = cityEditText.getText().toString();
@@ -106,6 +109,13 @@ public class MainActivity extends Activity {
         });
     }
 
+
+    /**
+     * This method refreshData is ensuring that the
+     * available weather information (if the network
+     * connection is stable) is refreshed based on the
+     * countries in the weather list
+     */
     public void refreshData() {
         if (isNetworkAvailable()) {
             for (Weather w: weathers) {
@@ -125,6 +135,7 @@ public class MainActivity extends Activity {
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
@@ -136,6 +147,8 @@ public class MainActivity extends Activity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    // used to close and clean up the database
     @Override
     protected void onDestroy() {
         super.onDestroy();
