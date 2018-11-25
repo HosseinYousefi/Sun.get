@@ -19,21 +19,22 @@ public class Sun {
         void got(Weather result);
     }
 
-    public void get(String cityName, Delegate delegate) {
+    static public void get(String cityName, Delegate delegate) {
         new WeatherTask(result -> {
 
             Realm realm = Realm.getDefaultInstance();
             realm.beginTransaction();
-            JSONObject reader = null;
+            JSONObject reader;
             try {
                 reader = new JSONObject(result);
                 reader = reader.getJSONObject("query");
                 reader = reader.getJSONObject("results");
                 reader = reader.getJSONObject("channel");
                 System.out.println(reader.toString());;
-                Weather weather = realm.createObjectFromJson(Weather.class, reader);
+                Weather weather = realm.createOrUpdateObjectFromJson(Weather.class, reader);
                 System.out.println(weather);
-                delegate.got(weather);
+                if (delegate != null)
+                    delegate.got(weather);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
