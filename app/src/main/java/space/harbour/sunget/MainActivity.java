@@ -74,9 +74,6 @@ public class MainActivity extends Activity {
         mAdapter = new WeatherAdapter(getApplicationContext());
         mRecyclerView.setAdapter(mAdapter);
 
-        // Setting up the animation
-        mRecyclerView.setItemAnimator(new SlideInUpAnimator());
-
 		// Get all the previous weathers in the database
         // Realm.deleteRealm(Realm.getDefaultConfiguration()); // Resetting the DB
         realm = Realm.getDefaultInstance();
