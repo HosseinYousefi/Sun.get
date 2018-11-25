@@ -3,15 +3,15 @@ android:
   components:
     - platform-tools
     - android-21
-    - android-26
-    - build-tools-26.0.1
-    - android-26
-    - addon-google_apis-google-26
+    - android-27
+    - build-tools-27.0.1
+    - android-27
+    - addon-google_apis-google-27
     - extra-google-google_play_services
     - extra-android-support
     - extra-google-m2repository
     - extra-android-m2repository
-    - sys-img-armeabi-v7a-android-26
+    - sys-img-armeabi-v7a-android-27
     - sys-img-armeabi-v7a-android-21
   licenses:
     - 'android-sdk-license-.+'
@@ -31,10 +31,10 @@ cache:
 
 install:
   - yes | sdkmanager --verbose "build-tools;26.0.2"
-  - yes | sdkmanager "platforms;android-26"
+  - yes | sdkmanager "platforms;android-27"
 
 before_install:
-  - echo y | android update sdk --no-ui --all --filter sys-img-armeabi-v7a-android-26,sys-img-x86_64-android-26,build-tools-26.0.1
+  - echo y | android update sdk --no-ui --all --filter sys-img-armeabi-v7a-android-27,sys-img-x86_64-android-27,build-tools-27.0.1
 
 before_script:
   - android list targets
