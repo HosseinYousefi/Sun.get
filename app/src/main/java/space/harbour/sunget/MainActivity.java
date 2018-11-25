@@ -16,6 +16,14 @@ import io.realm.Realm;
 import io.realm.RealmChangeListener;
 import io.realm.RealmResults;
 
+/**
+ * Public class extending Activity and representing
+ * the main activity our users can perform - looking
+ * up the weather for specific cities.
+ * The activity is initialized by the method onCreate
+ * (more details below)
+ *
+ */
 public class MainActivity extends Activity {
 	private RecyclerView mRecyclerView;
 	private WeatherAdapter mAdapter;
@@ -34,6 +42,18 @@ public class MainActivity extends Activity {
     // Setting the list when the AsyncQuery is loaded
     private RealmChangeListener<RealmResults<Weather>> realmChangeListener = weathers -> mAdapter.setData(weathers);
 
+    /**
+     * This method is used to initialize the activity.
+     * Initially, the content is set to a specific view
+     * by setContentView
+     * Thereafter, we get the previous weather data from
+     * the database by accessing Realm.
+     * With the gathered data we will set up the UI for
+     * the user by accessing the recycler view.
+     *
+     *
+     * @param savedInstanceState from a String keys to various values
+     */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

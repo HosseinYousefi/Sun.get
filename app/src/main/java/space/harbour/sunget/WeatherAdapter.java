@@ -11,6 +11,12 @@ import android.widget.TextView;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Public class WeatherAdapter extends the RecyclerView
+ * enabling an UI with smooth scrolling.
+ * This class loads the data which will be displayed
+ * in the UI to the user.
+ */
 public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHolder> {
     private List<Weather> dataSet = Collections.emptyList();
     Context context;
