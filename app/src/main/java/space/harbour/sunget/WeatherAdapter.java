@@ -37,6 +37,13 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
         notifyDataSetChanged();
     }
 
+    /**
+     * Public class ViewHolder extending the
+     * RecyclerView in order to support additional
+     * methods below requiring the detailed weather
+     * information / detailed view of each individual
+     * city.
+     */
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView cityTextView;
         public TextView tempTextView;
@@ -82,6 +89,14 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
         return lum > 186 ? 0x99000000 : 0x99FFFFFF;
     }
 
+
+    /**
+     * This method helps to set the right color
+     * for the UI based on the weather condition
+     * of the specific city.
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         String colorName = "color_" + dataSet.get(position).item.condition.code;
