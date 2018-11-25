@@ -52,4 +52,5 @@
     <string name="wi_yahoo_46">&#xf01b;</string>
     <string name="wi_yahoo_47">&#xf00e;</string>
     <string name="wi_yahoo_3200">&#xf077;</string>
+    <string name="menu_refresh">Reload data</string>
 </resources>

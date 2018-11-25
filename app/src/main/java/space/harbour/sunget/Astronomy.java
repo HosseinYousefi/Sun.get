@@ -1,7 +1,5 @@
 package space.harbour.sunget;
 
-import java.time.LocalTime;
-
 import io.realm.RealmObject;
 
 /**
