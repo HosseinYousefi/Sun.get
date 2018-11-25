@@ -7,20 +7,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import io.realm.Realm;
-import io.realm.RealmObject;
-import io.realm.RealmQuery;
-import io.realm.RealmResults;
+import java.util.Collections;
+import java.util.List;
 
 public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHolder> {
-    private RealmResults<Weather> dataSet;
-    Realm realm;
+    private List<Weather> dataSet = Collections.emptyList();
 
-    public WeatherAdapter() {
-        realm = Realm.getDefaultInstance();
-        realm.beginTransaction();
-        dataSet = realm.where(Weather.class).findAll();
-        realm.commitTransaction();
+    public WeatherAdapter() { }
+
+    public void setData(List<Weather> dataSet) {
+        if (dataSet == null) {
+            dataSet = Collections.emptyList();
+        }
+        this.dataSet = dataSet;
+        notifyDataSetChanged();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -52,4 +52,5 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
     public int getItemCount() {
         return dataSet.size();
     }
+
 }
