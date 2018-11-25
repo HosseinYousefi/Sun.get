@@ -84,6 +84,10 @@ public class MainActivity extends Activity {
 
 	}
 
+    /**
+     *
+     * @param view
+     */
     public void getWeather(View view) {
         String city = cityEditText.getText().toString();
         Sun.get(city, result -> {
