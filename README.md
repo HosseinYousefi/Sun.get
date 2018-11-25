@@ -6,7 +6,7 @@
 Sun.get – A weather app for coders...  
 
 
-[![Build Status](https://travis-ci.org/HosseinYousefi/sun.get.svg?branch=master)](https://travis-ci.org/HosseinYousefi/sun.get)
+[![Build Status](https://travis-ci.org/HosseinYousefi/Sun.get.svg?branch=master)](https://travis-ci.org/HosseinYousefi/Sun.get)
 
 # Exec Summary
 
@@ -18,16 +18,11 @@ After evaluation of various weather data APIs we took the decision to rely on th
 
 ## Availability
 
-With two main operating systems being distributed, iOS and Android, we had to take a decision for our starting point. The decision was then made based on the spread of each operating system in the global smartphone market. Android5, with its global reach of 85% of the smartphone market won the race impressively.
-
-## Functionality
-
-The core functionality will be provided by a measurement interface enabling users to choose between Fahrenheit and Celsius also lets them select the metric or the imperial system.
-The interface contains two methods, getMetric and getImperial.
+With two main operating systems being distributed, iOS and Android, we had to take a decision for our starting point. The decision was then made based on the spread of each operating system in the global smartphone market. Android, with its masisve global reach won.
 
 ## User Interface / Features
 
-Sun.get will offer you an easy and fresh look to get the most critical information, i.e. temperature and climate condition, at first glance.
+Sun.get will offer you an easy and fresh look to get the most critical information, i.e. temperature and climate condition, at first glance. [UI should be implemented]
 
 The source data enables us to provide you information about:
 
@@ -39,14 +34,6 @@ The source data enables us to provide you information about:
 - Forecast
 
 Especially, the forecast gives you the chance to plan not only the same day but also your upcoming weekend and potential trips and programs which need to be coded.
-
-Besides the general features, Sun.get provides:
-
- - Notifications every morning based on the GPS or your default location to structure your day more effectively.
-
- > e.g. if it is rainy: why don’t you stay home and accept a new code challenge?
-
-- City overview in case you consider yourself a frequent traveler or generally an interested weather guru.
 
 ## Team Members
 - Hossein Yousefi - 10+ years experience in programming with an international background. Born in Iran having studied in Italy and Spain and successfully participating in multiple programming challenges, he is a future star at his rising.
