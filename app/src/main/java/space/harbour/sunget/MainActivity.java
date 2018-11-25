@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
@@ -41,6 +42,7 @@ public class MainActivity extends Activity {
 		cityEditText = findViewById(R.id.cityEditText);
 
 		// Get all the previous weathers in the database
+        Realm.deleteRealm(Realm.getDefaultConfiguration());
         realm = Realm.getDefaultInstance();
         weathers = realm.where(Weather.class).findAllAsync();
         weathers.addChangeListener(realmChangeListener);
@@ -50,7 +52,7 @@ public class MainActivity extends Activity {
 		mRecyclerView.setHasFixedSize(true);
 		mLayoutManager = new LinearLayoutManager(this);
 		mRecyclerView.setLayoutManager(mLayoutManager);
-		mAdapter = new WeatherAdapter();
+		mAdapter = new WeatherAdapter(getApplicationContext());
 		mRecyclerView.setAdapter(mAdapter);
 
         // Updating the weathers in saved city
@@ -65,7 +67,10 @@ public class MainActivity extends Activity {
     public void getWeather(View view) {
         String city = cityEditText.getText().toString();
         Sun.get(city, result -> {
-            cityEditText.setText("");
+            if (result != null)
+                cityEditText.setText("");
+            else
+                Toast.makeText(this.mRecyclerView.getContext(), cityEditText.getText() + " is not a valid city!", Toast.LENGTH_SHORT).show();
         });
     }
 

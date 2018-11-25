@@ -15,7 +15,6 @@ public class Weather extends RealmObject {
 
     @PrimaryKey
     String description;
-
     Location location;
     Wind wind;
     Atmosphere atmosphere;

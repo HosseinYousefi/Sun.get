@@ -12,6 +12,7 @@ import io.realm.RealmObject;
 public class Condition extends RealmObject {
     String date;
     String temp;
+    String code;
     String text;
 
     public String getDate() {
@@ -28,6 +29,14 @@ public class Condition extends RealmObject {
 
     public void setTemp(String temp) {
         this.temp = temp;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getText() {

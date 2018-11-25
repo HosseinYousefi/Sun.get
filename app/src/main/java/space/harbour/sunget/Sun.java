@@ -17,20 +17,23 @@ public class Sun {
             Realm realm = Realm.getDefaultInstance();
             realm.beginTransaction();
             JSONObject reader;
+            Weather weather = null;
             try {
                 reader = new JSONObject(result);
                 reader = reader.getJSONObject("query");
                 reader = reader.getJSONObject("results");
                 reader = reader.getJSONObject("channel");
-                System.out.println(reader.toString());;
-                Weather weather = realm.createOrUpdateObjectFromJson(Weather.class, reader);
-                System.out.println(weather);
-                if (delegate != null)
-                    delegate.got(weather);
+                if (reader.has("description") && !reader.isNull("description")) {
+                    System.out.println(reader.toString());
+                    weather = realm.createOrUpdateObjectFromJson(Weather.class, reader);
+                    System.out.println(weather);
+                }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            realm.commitTransaction();;
+            if (delegate != null)
+                delegate.got(weather);
+            realm.commitTransaction();
             realm.close();
 
         }).execute(cityName);
